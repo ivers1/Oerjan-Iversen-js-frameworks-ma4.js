@@ -1,6 +1,5 @@
 import React from "react";
 import Heading from "./components/Layout/Heading";
-import Layout from "./components/recipe/RecipeItem";
 import "./App.css";
 
 function App() {
