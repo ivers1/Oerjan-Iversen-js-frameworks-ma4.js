@@ -4,6 +4,7 @@ import Col from "react-bootstrap/Col";
 import RecipeItem from "./RecipeItem";
 import { BASE_URL } from "../../constants/api";
 import SearchRecipe from "../SearchRecipe";
+import IngredientList from "../ingredient/IngredientList";
 
 function RecipeList() {
     
