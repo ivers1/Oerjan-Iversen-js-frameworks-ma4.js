@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-function RecipeItem({ id, title, thumbnail }) {
+function RecipeItem({ title, thumbnail }) {
 	return (
 		<Card>
 			<Card.Img variant="top" src={thumbnail} />
 			<Card.Body>
 				<Card.Title>{title}</Card.Title>
-				<Link to={"recipes/" + id}>
+				<Link to={ "recipe/" }>
 					<Button variant="secondary" block>
 						View
 					</Button>
@@ -21,9 +21,8 @@ function RecipeItem({ id, title, thumbnail }) {
 }
 
 RecipeItem.propTypes = {
-	id: PropTypes.number.isRequired,
-	name: PropTypes.string.isRequired,
-	image: PropTypes.string.isRequired
+	title: PropTypes.string.isRequired,
+	thumbnail: PropTypes.string.isRequired
 };
 
 export default RecipeItem;

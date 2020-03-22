@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import InputGroup from "react-bootstrap/inputGroup";
 import FormControl from "react-bootstrap/formControl";
 
-export default function Search({ handleSearch }) {
+function SearchRecipe({ handleSearch }) {
     return (
-        <InputGroup className="search">
+        <InputGroup className="SearchRecipe">
             <FormControl placeholder="Search by name..."
             onChange={event => handleSearch(event)}
         />
@@ -13,8 +13,8 @@ export default function Search({ handleSearch }) {
     );
 }
 
-Search.PropTypes = {
-    handleSearch: PropTypes.func.isRequired,
+SearchRecipe.PropTypes = {
+    handleSearch: PropTypes.function.isRequired
 };
 
-export default Search;
+export default SearchRecipe;
