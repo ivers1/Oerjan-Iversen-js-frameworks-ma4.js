@@ -3,8 +3,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import RecipeItem from "./RecipeItem";
 import { BASE_URL } from "../../constants/api";
-//import SearchRecipe from "../SearchRecipe";
-import IngredientList from "../ingredient/IngredientList";
+import SearchRecipe from "../SearchRecipe";
+//import IngredientList from "../ingredient/IngredientList";
 
 function RecipeList() {
     
@@ -39,13 +39,13 @@ function RecipeList() {
         <>
           
         
-        
+        <SearchRecipe handleSearch={filterCards} />
         <Row>
             {filteredRecipes.map(recipe => {
-             const { title, thumbnail } = recipe;
+             const { id, title, thumbnail } = recipe;
              
             return (
-                <Col>
+                <Col sm={6} md={3} key={id}>
                     <RecipeItem title={title} thumbnail={thumbnail} />
                 </Col>
             );
