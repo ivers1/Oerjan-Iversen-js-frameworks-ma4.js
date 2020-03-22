@@ -1,12 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-function Heading({ title }) {
-	return <h1>{title}</h1>;
+function Heading() {
+	return <h1>Recipe Puppy</h1>;
 }
-
-Heading.propTypes = {
-	title: PropTypes.string.isRequired
-};
 
 export default Heading;
