@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { Component } from "react";
 import { BASE_URL } from "../../constants/api";
 
 class IngredientList {
