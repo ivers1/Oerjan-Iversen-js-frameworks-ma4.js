@@ -3,14 +3,14 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import RecipeItem from "./RecipeItem";
 import { BASE_URL } from "../../constants/api";
-import SearchRecipe from "../SearchRecipe";
+//import SearchRecipe from "../SearchRecipe";
 import IngredientList from "../ingredient/IngredientList";
 
 function RecipeList() {
     
     const [recipes, setRecipes] = useState([]);
     const [filteredRecipes, setFilteredRecipes] = useState([]);
-    const [loading, setLoading] = useState(true);
+    
     
     useEffect(() => {
         fetch(BASE_URL)
@@ -20,7 +20,7 @@ function RecipeList() {
             setFilteredRecipes(json.results);
         })
             .catch(error => console.log(error))
-            .finally(() => setLoading(false));
+            
     }, []);
     
     const filterCards = function(e) {
@@ -37,7 +37,7 @@ function RecipeList() {
     
     return (
         <>
-            <SearchRecipe handleSearch={filterCards} />
+          
         
         
         <Row>
